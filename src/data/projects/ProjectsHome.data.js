@@ -1,20 +1,24 @@
-import imgPro1 from "../../assets/images/projects/coffeShop.png";
+import arrowIcon from "/public/images/icons/arrow-button.png";
 
 export const projects = [
   {
     id: 1001,
-    image: imgPro1,
+    image: `url("/images/projects/zoomtech.png")`,
+    icon: arrowIcon
   },
   {
     id: 1002,
-    image: imgPro1,
+    image: `url("/images/projects/nft.png")`,
+    icon: arrowIcon
   },
   {
     id: 1003,
-    image: imgPro1,
+    image: `url("/images/projects/coffeShop.png")`,
+    icon: arrowIcon
   },
   {
     id: 1004,
-    image: imgPro1,
+    image: `url("/images/projects/airbnb.png")`,
+    icon: arrowIcon
   },
 ];

@@ -6,12 +6,16 @@ import mainImg from "../../assets/images/dev-naziullah-wave.png";
 import PrimaryButton from "../Custom/PrimaryButton";
 
 const Hero = () => {
+
+  const styles = {
+    
+  }
   return (
     <Box>
       <Container>
         <Grid container py={4}>
-          <Grid item md={6} xs={12}>
-            <Typography variant="h1" py={2} color="initial">
+          <Grid sx={{styles}}  item md={6} xs={12}>
+            <Typography variant="h1" mt={4} py={2} color="initial">
               Naziullah Shawn
             </Typography>
             <Typography variant="h3" color="initial">

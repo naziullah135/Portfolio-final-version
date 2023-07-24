@@ -44,9 +44,11 @@ const navItems = [
 
 const navItemStyle = {
     color: 'text.darkGray',
+    fontWeight: 'bold',
+    fontSize: "16px",
     textTransform: "capitalize",
     '&:hover': {
-        color: "secondary.main"
+        color: "primary.main"
     }
 }
 
@@ -141,11 +143,11 @@ function Navbar() {
                                         </Box>
                                     </Link>
                             ))}
-                            <Link href={"/contact"}>
+                            {/* <Link href={"/contact"}>
                                 <PrimaryButton iconLess sx={{ padding: "7px 15px" }} color="secondary">
                                     Book a Meeting?
                                 </PrimaryButton>
-                            </Link>
+                            </Link> */}
 
                         </Box>
                     </Toolbar>

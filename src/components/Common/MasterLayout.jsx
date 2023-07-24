@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './NavBar';
 import Footer from './Footer';
+import ScrollTop from '../Custom/ScrollToTop';
 
 const MasterLayout = ({children}) => {
     return (
@@ -8,6 +9,7 @@ const MasterLayout = ({children}) => {
             <Navbar />
             {children}
             <Footer/>
+            <ScrollTop />
         </>
     );
 };
