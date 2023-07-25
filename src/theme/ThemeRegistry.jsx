@@ -14,10 +14,10 @@ const { palette } = createTheme();
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#5D6D7E",
+      main: "#3D00B7",
     },
     secondary: {
-      main:"#30323C",
+      main:"#5D6D7E",
     },
     info: {
       main: "#6563AE",

@@ -14,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { Accordion, AccordionDetails, AccordionSummary, Container, Slide, useScrollTrigger } from '@mui/material';
-import logo from '../../assets/images/logo.svg';
+import logo from '/public/images/logo.svg';
 import PrimaryButton from '../Custom/PrimaryButton';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -43,12 +43,12 @@ const navItems = [
 ];
 
 const navItemStyle = {
-    color: 'text.darkGray',
+    color: 'primary.main',
     fontWeight: 'bold',
     fontSize: "16px",
     textTransform: "capitalize",
     '&:hover': {
-        color: "primary.main"
+        color: "text.darkGray"
     }
 }
 
@@ -114,7 +114,7 @@ function Navbar() {
                         <Box sx={{ flexGrow: 1, '& img': { cursor: "pointer" } }}>
                             <Link href="/" passHref>
                                 <Box component={"span"}>
-                                    <Image width={60} height={60} src={logo} alt='img-logo' />
+                                    <Image width={70} height={70} src={logo} alt='img-logo' />
                                 </Box>
                             </Link>
                         </Box>

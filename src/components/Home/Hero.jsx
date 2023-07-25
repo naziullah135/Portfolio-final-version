@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Image from "next/image";
-import mainImg from "../../assets/images/dev-naziullah-wave.png";
+import mainImg from "/public/images/dev-naziullah-wave.png";
 import PrimaryButton from "../Custom/PrimaryButton";
 
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
               Naziullah Shawn
             </Typography>
             <Typography variant="h3" color="initial">
-              Frontend Developer
+              Designer, Frontend Developer, and Instructor
             </Typography>
             <Typography variant="p" color="initial">
               Welcome to my portfolio! I'm a passionate frontend developer with
@@ -28,7 +28,7 @@ const Hero = () => {
               design and code.
             </Typography>
             <Box py={4}>
-              <PrimaryButton color="secondary">Book a Meeting?</PrimaryButton>
+              <PrimaryButton color="primary">Book a Meeting?</PrimaryButton>
             </Box>
           </Grid>
           <Grid item md={6} xs={12}>

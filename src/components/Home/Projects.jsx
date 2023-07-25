@@ -7,7 +7,7 @@ import Link from "next/link";
 const Projects = () => {
  
   return (
-    <Box py={4} bgcolor={"#F2F4F4"}>
+    <Box py={8} bgcolor={"#F2F4F4"}>
       <Container>
         <Grid container spacing={4}>
           {projects.map(({ id, image, icon }) => (
@@ -55,7 +55,7 @@ const Projects = () => {
                         cx="47.8124"
                         cy="47.999"
                         r="47.1484"
-                        fill="#5D6D7E"
+                        fill="secondary.main"
                       />
                       <path
                         d="M43.4893 55.845L52.1317 48.2361L43.4893 40.1518"
@@ -69,17 +69,19 @@ const Projects = () => {
                 </Box>
                 <Box>
                   <Box
-                    p={4}
+                    p={2}
                     sx={{
                       position: "absolute",
                       bottom: "0",
                       color: "white",
-                      backgroundColor: "#5D6D7E",
+                      backgroundColor: "primary.main",
                       borderRadius: "0px 20px 0px 20px",
                     }}
                   >
-                    <Typography variant="h3">Coffee Shop Projects</Typography>
-                    <Typography variant="h5">Full-Stack App</Typography>
+                    <Typography variant="h4">Coffee Shop Projects</Typography>
+                    <Typography variant="subtitle1">Full-Stack App</Typography>
+                    <Typography variant="subtitle1">icons</Typography>
+                    
                   </Box>
                 </Box>
               </Box>

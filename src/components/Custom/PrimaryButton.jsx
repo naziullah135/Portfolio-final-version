@@ -19,7 +19,7 @@ const styles = {
         }
     },
     '&:hover': {
-        bgcolor: "primary.main",
+        bgcolor: "secondary.main",
         '& svg': {
             transform: "translateX(5px)",
         }

@@ -30,7 +30,7 @@ export default function ScrollTop(props) {
             >
                 {
                     children ||
-                    <Fab sx={{ p: 1, '&:hover': { bgcolor: "primary.main" } }} color="primary" size="small" aria-label="scroll back to top">
+                    <Fab sx={{ p: 1, '&:hover': { bgcolor: "secondary.main" } }} color="primary" size="small" aria-label="scroll back to top">
                         <svg viewBox="0 0 24 24" fill='#fff' aria-hidden="true">
                             <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" ></path>
                         </svg>
