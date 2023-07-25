@@ -5,7 +5,6 @@ import { projects } from "@/data/projects/ProjectsHome.data";
 import Link from "next/link";
 
 const Projects = () => {
- 
   return (
     <Box py={8} bgcolor={"#F2F4F4"}>
       <Container>
@@ -55,7 +54,7 @@ const Projects = () => {
                         cx="47.8124"
                         cy="47.999"
                         r="47.1484"
-                        fill="secondary.main"
+                        fill="#3D00B7"
                       />
                       <path
                         d="M43.4893 55.845L52.1317 48.2361L43.4893 40.1518"
@@ -81,7 +80,6 @@ const Projects = () => {
                     <Typography variant="h4">Coffee Shop Projects</Typography>
                     <Typography variant="subtitle1">Full-Stack App</Typography>
                     <Typography variant="subtitle1">icons</Typography>
-                    
                   </Box>
                 </Box>
               </Box>
