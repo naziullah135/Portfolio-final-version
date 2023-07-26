@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import { projects } from "@/data/projects/ProjectsHome.data";
 import Link from "next/link";
+import Image from "next/image";
 
 const Projects = () => {
   // const [margin, setMargin] = useState(0);
@@ -11,7 +12,7 @@ const Projects = () => {
     <Box py={8} bgcolor={"#F2F4F4"}>
       <Container>
         <Grid container spacing={4}>
-          {projects.map(({ id, image, url }) => (
+          {projects.map(({ id, image, icons, url, title }) => (
             <Grid item md={6} xs={12} key={id}>
               <Box sx={{ overflow: "hidden", borderRadius: "20px" }}>
                 <Box
@@ -77,21 +78,38 @@ const Projects = () => {
                   </Box>
                   <Box>
                     <Box
-                      p={4}
                       // style={pId === id ? { margin: `${margin}px` } : {}}
                       sx={{
                         position: "absolute",
                         bottom: "0",
+                        padding: "20px 32px 20px 32px",
                         color: "white",
                         backgroundColor: "primary.main",
                         borderRadius: "0px 20px 0px 20px",
                       }}
                     >
-                      <Typography variant="h4">Coffee Shop Projects</Typography>
                       <Typography variant="subtitle1">
                         Full-Stack App
                       </Typography>
-                      <Typography variant="subtitle1">icons</Typography>
+                      <Typography variant="h4">{title}</Typography>
+                      <Box
+                        gap={1}
+                        sx={{
+                          marginTop: "5px",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        {icons.map(({ img, id }) => (
+                          <Image
+                            key={id}
+                            width={25}
+                            height={25}
+                            src={img}
+                            alt="icon-react"
+                          />
+                        ))}
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
