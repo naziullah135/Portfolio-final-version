@@ -42,7 +42,7 @@ const Contact = () => {
   //         });
   // }
   return (
-    <Box sx={{ bgcolor: "light.main", p: "24px 35px", my: 8 }}>
+    <Box id={"contact"} sx={{ bgcolor: "light.main", p: "24px 35px", my: 8 }}>
       <Container>
         <Typography
           sx={{ textAlign: "center", fontWeight: "400" }}

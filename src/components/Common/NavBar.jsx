@@ -30,7 +30,7 @@ const drawerWidth = 260;
 const navItems = [
     {
         label: "Projects",
-        path: "/projects"
+        path: "#projects"
     },
     // {
     //     label: "Blogs",
@@ -38,7 +38,7 @@ const navItems = [
     // },
     {
         label: "Contacts",
-        path: "/contacts",
+        path: "#contact",
     }
 ];
 
