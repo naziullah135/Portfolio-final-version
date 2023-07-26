@@ -28,7 +28,7 @@ const Hero = () => {
               design and code.
             </Typography>
             <Box mt={4} py={4}>
-              <PrimaryButton color="primary">Book a Meeting?</PrimaryButton>
+              <PrimaryButton color="primary">Book a Meeting</PrimaryButton>
             </Box>
           </Grid>
           <Grid item md={6} xs={12} sx={{textAlign:'end'}}>

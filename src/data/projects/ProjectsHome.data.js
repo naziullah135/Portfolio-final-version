@@ -1,24 +1,23 @@
-import arrowIcon from "/public/images/icons/arrow-button.png";
 
 export const projects = [
   {
     id: 1001,
     image: `url("/images/projects/zoomtech.png")`,
-    icon: arrowIcon
+    url: 'https://zoomtechstreet.com/',
   },
   {
     id: 1002,
-    image: `url("/images/projects/nft.png")`,
-    icon: arrowIcon
+    image: `url("/images/projects/barberShop.png")`,
+    url: 'https://barbershop135.netlify.app/',
   },
   {
     id: 1003,
     image: `url("/images/projects/coffeShop.png")`,
-    icon: arrowIcon
+    url: 'https://coffebd.netlify.app/',
   },
   {
     id: 1004,
-    image: `url("/images/projects/airbnb.png")`,
-    icon: arrowIcon
+    image: `url("/images/projects/nft.png")`,
+    url: 'https://blockstak-nft.netlify.app/',
   },
 ];
