@@ -12,7 +12,7 @@ const Projects = () => {
     <Box py={8} bgcolor={"#F2F4F4"}>
       <Container>
         <Grid container spacing={4}>
-          {projects.map(({ id, image, icons, url, title }) => (
+          {projects.map(({ id, image, icons, url, title, subTitle }) => (
             <Grid item md={6} xs={12} key={id}>
               <Box sx={{ overflow: "hidden", borderRadius: "20px" }}>
                 <Box
@@ -88,9 +88,7 @@ const Projects = () => {
                         borderRadius: "0px 20px 0px 20px",
                       }}
                     >
-                      <Typography variant="subtitle1">
-                        Full-Stack App
-                      </Typography>
+                      <Typography variant="subtitle1">{subTitle}</Typography>
                       <Typography variant="h4">{title}</Typography>
                       <Box
                         gap={1}

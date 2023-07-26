@@ -3,6 +3,7 @@ export const projects = [
     id: 1001,
     image: `url("/images/projects/zoomtech.png")`,
     title: "Zoom Tech Street",
+    subTitle: "Full-Stack app",
     url: "https://zoomtechstreet.com/",
     icons: [
       { id: 1, img: "/icons/react.svg" },
@@ -28,6 +29,7 @@ export const projects = [
     id: 1002,
     image: `url("/images/projects/barberShop.png")`,
     title: "Barber Shop",
+    subTitle: "Full-Stack app",
     url: "https://barbershop135.netlify.app/",
     icons: [
       { id: 1, img: "/icons/react.svg" },
@@ -49,6 +51,7 @@ export const projects = [
     id: 1003,
     image: `url("/images/projects/coffeShop.png")`,
     title: "Coffee Shop",
+    subTitle: "Front-end app",
     url: "https://coffebd.netlify.app/",
     icons: [
       { id: 1, img: "/icons/react.svg" },
@@ -70,6 +73,7 @@ export const projects = [
     id: 1004,
     image: `url("/images/projects/nft.png")`,
     title: "Block Chain App",
+    subTitle: "Front-end app",
     url: "https://blockstak-nft.netlify.app/",
     icons: [
       { id: 1, img: "/icons/react.svg" },
