@@ -6,7 +6,7 @@ export const projects = [
     subTitle: "Full-Stack app",
     url: "https://zoomtechstreet.com/",
     icons: [
-      { id: 1, img: "/icons/react.svg" },
+      { id: 1, img: "/icons/nextjs.svg" },
       {
         id: 2,
         img: "/icons/node-js.svg",
@@ -29,7 +29,7 @@ export const projects = [
     id: 1002,
     image: `url("/images/projects/barberShop.png")`,
     title: "Barber Shop",
-    subTitle: "Full-Stack app",
+    subTitle: "MERN-Stack app",
     url: "https://barbershop135.netlify.app/",
     icons: [
       { id: 1, img: "/icons/react.svg" },

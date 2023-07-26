@@ -82,7 +82,7 @@ const Projects = () => {
                       sx={{
                         position: "absolute",
                         bottom: "0",
-                        padding: "20px 32px 20px 32px",
+                        padding: "25px 32px 25px 32px",
                         color: "white",
                         backgroundColor: "primary.main",
                         borderRadius: "0px 20px 0px 20px",

@@ -32,10 +32,10 @@ const navItems = [
         label: "Projects",
         path: "/projects"
     },
-    {
-        label: "Blogs",
-        path: "/blogs",
-    },
+    // {
+    //     label: "Blogs",
+    //     path: "/blogs",
+    // },
     {
         label: "Contacts",
         path: "/contacts",
