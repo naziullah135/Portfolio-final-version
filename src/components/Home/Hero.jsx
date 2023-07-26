@@ -14,7 +14,7 @@ const Hero = () => {
     <Box>
       <Container>
         <Grid container>
-          <Grid sx={{styles}}  item md={6} xs={12}>
+          <Grid sx={{styles}}  item md={6} sm={12} xs={12}>
             <Typography variant="h1" mt={4} py={2} color="initial">
               Naziullah Shawn
             </Typography>

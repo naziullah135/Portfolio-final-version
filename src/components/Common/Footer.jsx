@@ -34,7 +34,7 @@ const Footer = () => {
           <Box>
             <Image width={150} height={150} src={logo} alt="img-logo" />
           </Box>
-          <Typography variant="h3" sx={{ fontWeight: "400" }} color="#fff">
+          <Typography variant="h2" sx={{ fontWeight: "400" }} color="#fff">
             Living, learning, & leveling up <br /> one day at a time.
           </Typography>
           <Box mt={4} sx={{ display: "flex", justifyContent: "center" }}>

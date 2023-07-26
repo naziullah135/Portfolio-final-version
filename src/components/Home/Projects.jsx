@@ -11,9 +11,14 @@ const Projects = () => {
   return (
     <Box py={8} bgcolor={"#F2F4F4"}>
       <Container>
+        <Box sx={{pb: 4, textAlign: "center", color:"primary.main"}}>
+          <Typography variant="h4">Featured</Typography>
+          <Typography variant="h1">Projects</Typography>
+        </Box>
+
         <Grid container spacing={4}>
           {projects.map(({ id, image, icons, url, title, subTitle }) => (
-            <Grid item md={6} xs={12} key={id}>
+            <Grid item md={6} sm={12} xs={12} key={id}>
               <Box sx={{ overflow: "hidden", borderRadius: "20px" }}>
                 <Box
                   // onMouseOver={() => {

@@ -2,13 +2,25 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Roboto } from "next/font/google";
+import { Roboto, Antonio, Kaushan_Script } from "next/font/google";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
+
+const antonio = Antonio({
+  weight:["300", "400", "500", "700"],
+  style:'normal',
+  subsets:["latin"],
+});
+
+const kaushan = Kaushan_Script({
+  weight:["400"],
+  style:'normal',
+  subsets:["latin"],
+})
 
 const { palette } = createTheme();
 const theme = createTheme({
@@ -70,23 +82,27 @@ const theme = createTheme({
     }),
   },
   typography: {
-    fontFamily: roboto.style,
+   
     h1: {
+      fontFamily: kaushan.style.fontFamily,
       fontWeight: 700,
       fontSize: 46,
       // lineHeight: 56
     },
     h2: {
+      fontFamily: antonio.style.fontFamily,
       fontWeight: 600,
       fontSize: 33,
       lineHeight: 1.3,
     },
     h3: {
+      fontFamily: roboto.style.fontFamily,
       fontWeight: 600,
       fontSize: 23,
       // lineHeight: 33
     },
     h4: {
+      fontFamily: antonio.style.fontFamily,
       fontWeight: 600,
       fontSize: 19,
       // lineHeight: 29
