@@ -73,17 +73,17 @@ const Contact = () => {
   return (
     <Box id={"contact"} sx={{ bgcolor: "light.main", p: "24px 35px", my: 8 }}>
       <Container>
-        <Typography
-          sx={{ textAlign: "center", fontWeight: "400" }}
+        <Typography  
+          sx={{ textAlign: "center", fontWeight: "400", pb:8 }}
           variant="h2"
           color="text.darkGray"
         >
           Thanks for taking the time to reach <br /> out. How can I help you
           today?
         </Typography>
-        <Grid py={4} container spacing={2}>
+        <Grid container spacing={2}>
           <Grid md={6} sm={6} xs={12}>
-            <Typography mt={2} variant="h2" color="initial">
+            <Typography mt={2} variant="h3" color="initial">
               DON'T BE SHY !
             </Typography>
             <Typography variant="h6" color="palette.lightGray">
@@ -93,24 +93,24 @@ const Contact = () => {
               be part of your visions.
             </Typography>
            <Box mt={4}>
-           <Typography variant="h2" color="initial">
+           <Typography variant="h3" color="initial">
               Contact information
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", pt: 2, }}>
               <DraftsOutlined />
-              <Typography sx={{ pl: 1 }} variant="h4" color="initial">
+              <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
                 naziullah.shawn@gmail.com
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
               <PhoneInTalk />
-              <Typography sx={{ pl: 1 }} variant="h4" color="initial">
+              <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
                 01857526232
               </Typography>
             </Box>
            </Box>
             <Box mt={4}>
-              <Typography variant="h2" color="initial">
+              <Typography variant="h3" color="initial">
                 Connect with me
               </Typography>
               <Box gap={2} sx={{ display: "flex", mt:2, }}>
