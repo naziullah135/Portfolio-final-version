@@ -5,6 +5,14 @@ import InputField from "../Custom/InputField";
 import PrimaryButton from "../Custom/PrimaryButton";
 // import emailjs from '@emailjs/browser';
 import { useState } from "react";
+import {
+  DraftsOutlined,
+  PhoneCallback,
+  PhoneInTalk,
+  PhoneLockedOutlined,
+} from "@mui/icons-material";
+import footerData from "@/data/footer.data";
+import Link from "next/link";
 // import Swal from 'sweetalert2';
 const Contact = () => {
   const [formData, setFormData] = useState({});
@@ -41,6 +49,27 @@ const Contact = () => {
   //             })
   //         });
   // }
+
+  const iconStyle = {
+    padding: "0",
+   
+    "& svg": {
+      transition: ".3s ease",
+      "& path": {
+        // fill: "#fff",
+      },
+    },
+    "&:hover": {
+      // bgcolor: "#fff",
+      "& svg": {
+        transform: "translateY(-5px)",
+        "& path": {
+          fill: "#3D00B7",
+          stroke: "#FDFEFE",
+        },
+      },
+    },
+  };
   return (
     <Box id={"contact"} sx={{ bgcolor: "light.main", p: "24px 35px", my: 8 }}>
       <Container>
@@ -52,9 +81,49 @@ const Contact = () => {
           Thanks for taking the time to reach <br /> out. How can I help you
           today?
         </Typography>
-        <form>
-          <Grid container spacing={2}>
-            <Grid item md={6} sm={12} xs={12}>
+        <Grid py={4} container spacing={2}>
+          <Grid md={6} sm={6} xs={12}>
+            <Typography mt={2} variant="h2" color="initial">
+              DON'T BE SHY !
+            </Typography>
+            <Typography variant="h6" color="palette.lightGray">
+              {" "}
+              Feel free to get in touch with me. I am always open to <br />{" "}
+              discussing new projects, creative ideas or opportunities <br /> to
+              be part of your visions.
+            </Typography>
+           <Box mt={4}>
+           <Typography variant="h2" color="initial">
+              Contact information
+            </Typography>
+            <Box sx={{ display: "flex", alignItems: "center", pt: 2, }}>
+              <DraftsOutlined />
+              <Typography sx={{ pl: 1 }} variant="h4" color="initial">
+                naziullah.shawn@gmail.com
+              </Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
+              <PhoneInTalk />
+              <Typography sx={{ pl: 1 }} variant="h4" color="initial">
+                01857526232
+              </Typography>
+            </Box>
+           </Box>
+            <Box mt={4}>
+              <Typography variant="h2" color="initial">
+                Connect with me
+              </Typography>
+              <Box gap={2} sx={{ display: "flex", mt:2, }}>
+                {footerData.map(({ icons, url, id }) => (
+                  <Link href={url} key={id}>
+                    <Box sx={iconStyle}>{icons}</Box>
+                  </Link>
+                ))}
+              </Box>
+            </Box>
+          </Grid>
+          <Grid md={6} sm={6} xs={12}>
+            <form>
               <InputField
                 required
                 size="small"
@@ -76,8 +145,6 @@ const Contact = () => {
                 label="Phone number"
                 name="phone"
               />
-            </Grid>
-            <Grid item md={6} sm={12} xs={12}>
               <InputField
                 required
                 size="small"
@@ -97,9 +164,6 @@ const Contact = () => {
                 label="Company name"
                 name="companyName"
               />
-            </Grid>
-
-            <Grid item md={12} sm={12} xs={12}>
               <InputField
                 required
                 size="small"
@@ -112,16 +176,16 @@ const Contact = () => {
                 label="Anything else?"
                 name="message"
               />
-            </Grid>
+              <PrimaryButton
+                sx={{ mt: 2, borderRadius: "none" }}
+                fullWidth
+                type="submit"
+              >
+                Submit
+              </PrimaryButton>
+            </form>
           </Grid>
-          <PrimaryButton
-            sx={{ mt: 2, borderRadius: "none" }}
-            fullWidth
-            type="submit"
-          >
-            Submit
-          </PrimaryButton>
-        </form>
+        </Grid>
       </Container>
     </Box>
   );

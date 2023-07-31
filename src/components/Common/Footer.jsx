@@ -28,13 +28,13 @@ const Footer = () => {
   };
 
   return (
-    <Box bgcolor={"#3D00B7"} py={8}>
+    <Box bgcolor={"primary.main"} py={2}>
       <Container>
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "center", p:8, borderRadius:'20px' }} >
           <Box>
             <Image width={150} height={150} src={logo} alt="img-logo" />
           </Box>
-          <Typography variant="h2" sx={{ fontWeight: "400" }} color="#fff">
+          <Typography variant="h2" sx={{ fontWeight: "400" }} color="#ffffff">
             Living, learning, & leveling up <br /> one day at a time.
           </Typography>
           <Box mt={4} sx={{ display: "flex", justifyContent: "center" }}>

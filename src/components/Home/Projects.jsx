@@ -9,9 +9,9 @@ const Projects = () => {
   // const [margin, setMargin] = useState(0);
   // const [pId, setPid] = useState();
   return (
-    <Box id={"projects"} py={8} bgcolor={"#F2F4F4"}>
-      <Container>
-        <Box sx={{pb: 4, textAlign: "center", color:"primary.main"}}>
+    <Box  bgcolor={"#EAECEE"} id={"projects"} py={8}>
+      <Container  >
+       <Box sx={{pb: 4, textAlign: "center", color:"primary.main"}}>
           <Typography variant="h4">Featured</Typography>
           <Typography variant="h1">Projects</Typography>
         </Box>

@@ -4,7 +4,7 @@ import React from "react";
 const styles = {
   color: "#3D00B7",
   border: "2px solid #3D00B7",
-  borderRadius: "40px",
+  borderRadius: "5px",
   textAlign: "center",
   padding: "10px 30px",
   boxShadow: "none",

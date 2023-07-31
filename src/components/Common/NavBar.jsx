@@ -64,7 +64,7 @@ function Nav(props) {
     });
     return (
         <Slide appear={false} direction="down" in={!trigger}>
-            <AppBar sx={{ bgcolor: "light.main", py: 1, boxShadow: triggerAtTop ? "0px 0px 10px rgba(0, 0, 0, 0.1)" : "none" }}>
+            <AppBar sx={{bgcolor: "light.main", py: 1, boxShadow: triggerAtTop ? "0px 0px 10px rgba(0, 0, 0, 0.1)" : "none" }}>
                 {children}
             </AppBar>
         </Slide>
