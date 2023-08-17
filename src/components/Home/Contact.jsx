@@ -3,7 +3,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import InputField from "../Custom/InputField";
 import PrimaryButton from "../Custom/PrimaryButton";
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { useState } from "react";
 import {
   DraftsOutlined,
@@ -13,42 +13,42 @@ import {
 } from "@mui/icons-material";
 import footerData from "@/data/footer.data";
 import Link from "next/link";
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 const Contact = () => {
   const [formData, setFormData] = useState({});
 
-  // const handleOnChange = (e) => {
-  //     setFormData((pre) => ({
-  //         ...pre,
-  //         [e.target.name]: e.target.value
-  //     }))
-  // }
-  // const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     console.log(formData);
-  //     emailjs.send(
-  //         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-  //         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-  //         formData,
-  //         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-  //     )
-  //         .then(() => {
-  //             Swal.fire({
-  //                 icon: "success",
-  //                 title: "Good job!",
-  //                 text: "Message Send Successfully!",
-  //                 timer: 2000
-  //             })
-  //             e.target.reset();
-  //         }, () => {
-  //             Swal.fire({
-  //                 icon: 'error',
-  //                 title: 'Oops...',
-  //                 text: 'Something went wrong!',
-  //                 timer: 2000
-  //             })
-  //         });
-  // }
+  const handleOnChange = (e) => {
+      setFormData((pre) => ({
+          ...pre,
+          [e.target.name]: e.target.value
+      }))
+  }
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log(formData);
+      emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          formData,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      )
+          .then(() => {
+              Swal.fire({
+                  icon: "success",
+                  title: "Good job!",
+                  text: "Message Send Successfully!",
+                  timer: 2000
+              })
+              e.target.reset();
+          }, () => {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Something went wrong!',
+                  timer: 2000
+              })
+          });
+  }
 
   const iconStyle = {
     padding: "0",
@@ -123,7 +123,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid md={6} sm={6} xs={12}>
-            <form>
+            <form onSubmit={handleSubmit}>
               <InputField
                 required
                 size="small"
