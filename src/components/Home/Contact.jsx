@@ -3,7 +3,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import InputField from "../Custom/InputField";
 import PrimaryButton from "../Custom/PrimaryButton";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import {
   DraftsOutlined,
@@ -13,46 +13,50 @@ import {
 } from "@mui/icons-material";
 import footerData from "@/data/footer.data";
 import Link from "next/link";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 const Contact = () => {
   const [formData, setFormData] = useState({});
 
   const handleOnChange = (e) => {
-      setFormData((pre) => ({
-          ...pre,
-          [e.target.name]: e.target.value
-      }))
-  }
+    setFormData((pre) => ({
+      ...pre,
+      [e.target.name]: e.target.value,
+    }));
+  };
   const handleSubmit = (e) => {
-      e.preventDefault();
-      console.log(formData);
-      emailjs.send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-          formData,
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+    e.preventDefault();
+    console.log(formData);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
-          .then(() => {
-              Swal.fire({
-                  icon: "success",
-                  title: "Good job!",
-                  text: "Message Send Successfully!",
-                  timer: 2000
-              })
-              e.target.reset();
-          }, () => {
-              Swal.fire({
-                  icon: 'error',
-                  title: 'Oops...',
-                  text: 'Something went wrong!',
-                  timer: 2000
-              })
+      .then(
+        () => {
+          Swal.fire({
+            icon: "success",
+            title: "Good job!",
+            text: "Message Send Successfully!",
+            timer: 2000,
           });
-  }
+          e.target.reset();
+        },
+        () => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            timer: 2000,
+          });
+        }
+      );
+  };
 
   const iconStyle = {
     padding: "0",
-   
+
     "& svg": {
       transition: ".3s ease",
       "& path": {
@@ -73,8 +77,8 @@ const Contact = () => {
   return (
     <Box id={"contact"} sx={{ p: "24px 35px", my: 8 }}>
       <Container>
-        <Typography  
-          sx={{ textAlign: "center", fontWeight: "400", pb:8 }}
+        <Typography
+          sx={{ textAlign: "center", fontWeight: "400", pb: 8 }}
           variant="h2"
           color="text.darkGray"
         >
@@ -92,28 +96,28 @@ const Contact = () => {
               discussing new projects, creative ideas or opportunities <br /> to
               be part of your visions.
             </Typography>
-           <Box mt={4}>
-           <Typography variant="h3" color="initial">
-              Contact information
-            </Typography>
-            <Box sx={{ display: "flex", alignItems: "center", pt: 2, }}>
-              <DraftsOutlined />
-              <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
-                naziullah.shawn@gmail.com
+            <Box mt={4}>
+              <Typography variant="h3" color="initial">
+                Contact information
               </Typography>
+              <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
+                <DraftsOutlined />
+                <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
+                  naziullah.shawn@gmail.com
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
+                <PhoneInTalk />
+                <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
+                  01857526232
+                </Typography>
+              </Box>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", pt: 2 }}>
-              <PhoneInTalk />
-              <Typography sx={{ pl: 1 }} variant="subtitle1" color="initial">
-                01857526232
-              </Typography>
-            </Box>
-           </Box>
             <Box mt={4}>
               <Typography variant="h3" color="initial">
                 Connect with me
               </Typography>
-              <Box gap={2} sx={{ display: "flex", mt:2, }}>
+              <Box gap={2} sx={{ display: "flex", mt: 2 }}>
                 {footerData.map(({ icons, url, id }) => (
                   <Link href={url} key={id}>
                     <Box sx={iconStyle}>{icons}</Box>
@@ -132,6 +136,7 @@ const Contact = () => {
                 variant="outlined"
                 type="text"
                 label="Full name"
+                onChange={handleOnChange}
                 name="name"
               />
 
@@ -143,6 +148,7 @@ const Contact = () => {
                 variant="outlined"
                 type="number"
                 label="Phone number"
+                onChange={handleOnChange}
                 name="phone"
               />
               <InputField
@@ -153,6 +159,7 @@ const Contact = () => {
                 variant="outlined"
                 type="email"
                 label="Email address"
+                onChange={handleOnChange}
                 name="email"
               />
               <InputField
@@ -162,6 +169,7 @@ const Contact = () => {
                 variant="outlined"
                 type="text"
                 label="Company name"
+                onChange={handleOnChange}
                 name="companyName"
               />
               <InputField
@@ -174,6 +182,7 @@ const Contact = () => {
                 variant="outlined"
                 type="text"
                 label="Anything else?"
+                onChange={handleOnChange}
                 name="message"
               />
               <PrimaryButton
