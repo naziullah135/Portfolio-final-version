@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Image from "next/image";
 import mainImg from "/public/images/profile-cut-3.png";
 import PrimaryButton from "../Custom/PrimaryButton";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -24,9 +25,77 @@ const Hero = () => {
               design and code.
             </Typography>
             <Box mt={4} py={4}>
-              <PrimaryButton color="primary">Book a Meeting</PrimaryButton>
+              <Link href="#contact"><PrimaryButton color="primary">Book a Meeting</PrimaryButton></Link>
             </Box>
-            <Box gap={2} sx={{ display: "flex", mt: 5 }}>
+            <Grid container mt={8} sx={{justifyContent:"center"}}>
+              <Grid item md={6} sm={12} xs={12}>
+                <Image
+                  width={40}
+                  height={40}
+                  src="/icons/nextjs.svg"
+                />
+                <Image
+                   style={{marginLeft: 18}}
+                width={40}
+                height={40}
+                src="/icons/react.svg"
+                alt="react-icons"
+              />
+                <Image
+                  style={{marginLeft: 18}}
+                width={40}
+                height={40}
+                src="/icons/node-js.svg"
+                alt="react-icons"
+              />
+                <Image
+                  style={{marginLeft: 18}}
+                width={40}
+                height={40}
+                src="/icons/express-js.svg"
+                alt="react-icons"
+              />
+                <Image
+                  style={{marginLeft: 18}}
+                width={40}
+                height={40}
+                src="/icons/mongodb.svg"
+                alt="react-icons"
+              />
+              </Grid>
+              <Grid item md={6} sm={12} xs={12}>
+                <Image
+                  width={40}
+                  height={40}
+                  src="/icons/bootstrap.svg"
+                />
+                <Image
+                style={{marginLeft: 18}}
+                  width={40}
+                  height={40}
+                  src="/icons/material-ui.svg"
+                />
+                <Image
+                style={{marginLeft: 18}}
+                  width={40}
+                  height={40}
+                  src="/icons/tailwind-css.svg"
+                />
+                <Image
+                style={{marginLeft: 18}}
+                  width={40}
+                  height={40}
+                  src="/icons/firebase.svg"
+                />
+                <Image
+                style={{marginLeft: 18}}
+                  width={40}
+                  height={40}
+                  src="/icons/javascript.svg"
+                />
+              </Grid>
+            </Grid>
+            {/* <Box gap={2} sx={{ display: "flex", mt: 5 }}>
               <Image
                 width={40}
                 height={40}
@@ -88,7 +157,7 @@ const Hero = () => {
                 src="/icons/javascript.svg"
                 alt="react-icons"
               />
-            </Box>
+            </Box> */}
           </Grid>
           <Grid item md={6} sm={12} xs={12}>
             <Box
