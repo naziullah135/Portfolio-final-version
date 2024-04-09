@@ -2,9 +2,9 @@
 import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Roboto, Antonio, Kaushan_Script } from "next/font/google";
+import { Poppins, Antonio, Kaushan_Script } from "next/font/google";
 
-const roboto = Roboto({
+const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -84,7 +84,7 @@ const theme = createTheme({
   typography: {
    
     h1: {
-      fontFamily: kaushan.style.fontFamily,
+      fontFamily: poppins.style.fontFamily,
       fontWeight: 700,
       fontSize: 46,
       // lineHeight: 56
@@ -96,7 +96,7 @@ const theme = createTheme({
       lineHeight: 1.3,
     },
     h3: {
-      fontFamily: roboto.style.fontFamily,
+      fontFamily: poppins.style.fontFamily,
       fontWeight: 600,
       fontSize: 23,
       // lineHeight: 33

@@ -15,7 +15,7 @@ const Hero = () => {
             <Typography variant="h1" mt={4} py={2} color="initial">
               Naziullah Shawn
             </Typography>
-            <Typography mt={4} variant="h3" color="initial">
+            <Typography mt={2} mb={2} variant="h3" color="initial">
               Designer, MERN-Stack Developer, and Instructor
             </Typography>
             <Typography variant="p" color="initial">
