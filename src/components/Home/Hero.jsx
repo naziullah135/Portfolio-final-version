@@ -16,7 +16,7 @@ const Hero = () => {
               Naziullah Shawn
             </Typography>
             <Typography mt={2} mb={2} variant="h3" color="initial">
-              Designer, MERN-Stack Developer, and Instructor
+              Full-Stack Developer and Instructor
             </Typography>
             <Typography variant="p" color="initial">
               Welcome to my portfolio! I'm a passionate frontend developer with
