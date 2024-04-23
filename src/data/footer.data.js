@@ -15,7 +15,7 @@ const footerData = [
   },
   {
     id: "002",
-    url: "https://twitter.com/NaziullahShawn3",
+    url: "https://twitter.com/naziullaah",
     icons: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
