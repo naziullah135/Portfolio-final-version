@@ -90,7 +90,7 @@ const theme = createTheme({
       // lineHeight: 56
     },
     h2: {
-      fontFamily: antonio.style.fontFamily,
+      fontFamily: poppins.style.fontFamily,
       fontWeight: 600,
       fontSize: 33,
       lineHeight: 1.3,
@@ -102,7 +102,7 @@ const theme = createTheme({
       // lineHeight: 33
     },
     h4: {
-      fontFamily: antonio.style.fontFamily,
+      fontFamily: poppins.style.fontFamily,
       fontWeight: 600,
       fontSize: 19,
       // lineHeight: 29
