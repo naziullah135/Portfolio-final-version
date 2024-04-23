@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import ThemeRegistry from "../theme/ThemeRegistry";
+import { Analytics } from '@vercel/analytics/react';
 import MasterLayout from "@/components/Common/MasterLayout";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <body className={inter.className}>
           {" "}
           <MasterLayout>{children}</MasterLayout>
+          <Analytics />
         </body>
       </ThemeRegistry>
     </html>
