@@ -6,7 +6,7 @@ import MasterLayout from "@/components/Common/MasterLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Naziullah | Portfolio",
+  title: "Naziullah | Full Stack Developer | React | Next js | Node js",
   description: "Develop by Naziullah Shawn",
 };
 
