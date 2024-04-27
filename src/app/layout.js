@@ -2,9 +2,20 @@ import { Inter } from "next/font/google";
 import ThemeRegistry from "../theme/ThemeRegistry";
 import { Analytics } from "@vercel/analytics/react";
 import MasterLayout from "@/components/Common/MasterLayout";
+import Hotjar from '@hotjar/browser';
 
 import Script from "next/script";
 import hotjarScript from "../../public/hotjar";
+
+const siteId = 4961548;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
+// Initializing with `debug` option:
+Hotjar.init(siteId, hotjarVersion, {
+  debug: true
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
