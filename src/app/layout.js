@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
 import ThemeRegistry from "../theme/ThemeRegistry";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import MasterLayout from "@/components/Common/MasterLayout";
+
+import Script from "next/script";
+import hotjarScript from "../../public/hotjar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +19,11 @@ export default function RootLayout({ children }) {
       <ThemeRegistry>
         <body className={inter.className}>
           {" "}
+          <Script
+            id="hotjar-script"
+            strategy="afterInteractive"
+            onLoad={hotjarScript}
+          />
           <MasterLayout>{children}</MasterLayout>
           <Analytics />
         </body>
